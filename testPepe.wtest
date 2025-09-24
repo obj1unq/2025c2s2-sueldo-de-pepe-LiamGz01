@@ -1,10 +1,38 @@
-import pepe.*
+import sueldoPepe.* 
 
 describe "Sueldo Pepe" {
-	
-	test "Test 1" {
-		//TODO: Implementame
+
+	test "test 1" {
+	pepe.categoria(cadete)
+	pepe.resultado(nulo)
+	pepe.presentismo(demagogico)
+	pepe.faltas(5)
+	assert.equals(20300, pepe.sueldo())
+	}
+
+	test "test 2" {
+	pepe.categoria(gerente)
+	pepe.resultado(porcentaje)
+	pepe.presentismo(nulo)
+	assert.equals(16500, pepe.sueldo())
+	}
+
+	test "test 3" {
+	  pepe.categoria(cadete)
+	  pepe.resultado(porcentaje)
+	  pepe.presentismo(normal)
+	  pepe.faltas(0)
+	  assert.equals(24000, pepe.sueldo())
+	}
+
+	test "test 4" {
+	  pepe.categoria(cadete)
+	  pepe.resultado(porcentaje)
+	  pepe.presentismo(normal)
+	  pepe.faltas(1)
+	  assert.equals(23000, pepe.sueldo())
 	}
 
 	
 }
+
